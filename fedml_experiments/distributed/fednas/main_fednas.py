@@ -43,7 +43,7 @@ def add_args(parser):
 
     parser.add_argument('--stage', type=str, default='search',
                         help='stage: search; train')
-    parser.add_argument('--model', type=str, default='resnet', metavar='N',
+    parser.add_argument('--model', type=str, default='darts', metavar='N',
                         help='neural network used in training')
 
     parser.add_argument('--dataset', type=str, default='cifar10', metavar='N',
@@ -69,7 +69,7 @@ def add_args(parser):
     parser.add_argument('--local_points', type=int, default=5000, metavar='LP',
                         help='the approximate fixed number of data points we will have on each local worker')
 
-    parser.add_argument('--client_number', type=int, default=16, metavar='NN',
+    parser.add_argument('--client_number', type=int, default=8, metavar='NN',
                         help='number of workers in a distributed cluster')
 
     parser.add_argument('--comm_round', type=int, default=50,
